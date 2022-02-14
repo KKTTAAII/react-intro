@@ -1,0 +1,1 @@
+const Button = (props) => (<button type="button" class="btn btn-success">{props.msg}</button>)
