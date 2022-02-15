@@ -1,15 +1,15 @@
-const Person = (props) => {
-  let name = props.name.length > 8 ? props.name.slice(0, 6) : props.name;
-  let msg = props.age > 18 ? <h3>please go vote!</h3> : <h3>you must be 18</h3>;
+const Person = ({name, age, hobbies}) => {
+  let personName = name.length > 8 ? name.slice(0, 6) : name;
+  let msg = age > 18 ? <h3>please go vote!</h3> : <h3>you must be 18</h3>;
   return (
     <div>
       <p>Learn some information about this person</p>
       {msg}
-      <p>Name: {name}</p>
-      <p>Age: {props.age}</p>
+      <p>Name: {personName}</p>
+      <p>Age: {age}</p>
       <b>Hobbies:</b>
       <ul>
-        {props.hobbies.map(hobby =><li>{hobby}</li>)}
+        {hobbies.map(hobby =><li>{hobby}</li>)}
       </ul>
     </div>
   );

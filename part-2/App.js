@@ -1,9 +1,10 @@
 const App = () => {
+    const date = new Date().toISOString().replace("T"," ").slice(0,19);
     return (
         <div>
-            <Tweet name="Kratai" username="Ktai" msg="Hello World" date="2/13/2022"/>
-            <Tweet name="Evie" username="Eve" msg="I love human food" date="2/10/2019"/>
-            <Tweet name="Josie" username="Jo" msg="I am tired of cooking!" date="2/11/2022"/>
+            <Tweet name="Kratai" username="Ktai" msg="Hello World" date={date}/>
+            <Tweet name="Evie" username="Eve" msg="I love human food" date={date}/>
+            <Tweet name="Josie" username="Jo" msg="I am tired of cooking!" date={date}/>
         </div>
     )
 }
